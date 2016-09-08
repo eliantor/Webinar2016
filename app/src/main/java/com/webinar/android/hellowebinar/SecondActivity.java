@@ -36,7 +36,8 @@ public class SecondActivity extends Activity {
         findViewById(R.id.respond).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setResult(RESULT_OK);
+                setResult(RESULT_OK,new Intent()
+                        .putExtra("RESPONSE","VALUE"));
                 finish();
             }
         });

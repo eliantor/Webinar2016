@@ -4,12 +4,15 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.webinar.android.hellowebinar.data.Student;
 
 /**
  * Created by aktor on 06/09/16.
@@ -101,6 +104,9 @@ public class HelloActivity extends Activity implements View.OnClickListener{
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString(TEXT_KEY,mText);
+//        outState.putParcelable("STUDENT",new Student("Andrea",2));
+//        Student student = outState.getParcelable("STUDENT");
+
     }
 
     private void updateText(){
