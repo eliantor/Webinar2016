@@ -5,6 +5,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.format.DateFormat;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:text="Change Fragment"
+        android:id="@+id/replace_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:background="#F99"
+        android:id="@+id/hole_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+    </FrameLayout>
+<fragment
+    android:id="@+id/InputForm"
+    android:name="com.webinar.android.hellowebinar.fragments.AdderFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout="@layout/note_adder" />
+    <fragment
+        android:id="@+id/NotesList"
+        android:name="com.webinar.android.hellowebinar.fragments.ListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/note_item_view" />
+
+
+</LinearLayout>
