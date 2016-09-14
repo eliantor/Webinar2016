@@ -44,12 +44,13 @@ public class FragmentsListActivity
 
 
         Button changer =(Button) findViewById(R.id.replace_fragment);
-        changer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                changeFragment();
-            }
-        });
+        changer.setOnClickListener(
+                new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    changeFragment();
+                }
+            });
     }
 
     private void changeFragment(){
@@ -57,6 +58,8 @@ public class FragmentsListActivity
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
                .replace(R.id.hole_content,color,RANDOMS)
+//                .add(0,color,"NOME")
+//                .remove()
                 .addToBackStack(null)
                .commit();
     }
@@ -70,7 +73,8 @@ public class FragmentsListActivity
 
     private void updateListUI(){
         FragmentManager fm = getSupportFragmentManager();
-        ListFragment listFragment=(ListFragment)fm.findFragmentById(R.id.NotesList);
+        ListFragment listFragment=(ListFragment)
+                fm.findFragmentById(R.id.NotesList);
         listFragment.showData(mNotes);
     }
 
@@ -78,11 +82,12 @@ public class FragmentsListActivity
     public void onAttachFragment(Fragment fragment) {
         super.onAttachFragment(fragment);
         if (fragment instanceof AdderFragment){
-            ((AdderFragment) fragment).setListener(new AdderFragment.OnAddNoteListener() {
-                @Override
-                public void onAddNote(String title, String content) {
-                    addNote(title,content);
-                }
+            ((AdderFragment) fragment).setListener(
+                    new AdderFragment.OnAddNoteListener() {
+                        @Override
+                        public void onAddNote(String title, String content) {
+                            addNote(title,content);
+                        }
             });
         }
 

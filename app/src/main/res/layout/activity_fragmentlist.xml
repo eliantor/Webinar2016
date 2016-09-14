@@ -16,6 +16,7 @@
         android:layout_height="100dp">
 
     </FrameLayout>
+
 <fragment
     android:id="@+id/InputForm"
     android:name="com.webinar.android.hellowebinar.fragments.AdderFragment"

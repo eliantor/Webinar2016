@@ -23,8 +23,6 @@ public class AdderFragment extends Fragment {
         public void onAddNote(String title,String content);
     }
 
-
-
     private EditText mNoteTitle;
     private EditText mNoteContent;
     private Button mAdder;
