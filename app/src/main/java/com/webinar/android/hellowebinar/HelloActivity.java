@@ -37,6 +37,7 @@ public class HelloActivity extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate: called");
 
+
         setContentView(R.layout.hello_activity);
         TextView viewById =(TextView) findViewById(R.id.textView);
         viewById.setText("CIAO CODE");
